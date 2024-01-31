@@ -4,7 +4,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate} from 'react-router-dom'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-import FacebookLogin from '@greatsumini/react-facebook-login';
+import FacebookLogin from 'react-facebook-login';
 import MicrosoftLogin from 'react-microsoft-login';
 import GitHubLogin from "react-github-login";
 import aJwtDecode from "./authi";

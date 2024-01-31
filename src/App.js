@@ -25,14 +25,7 @@ import Anagram from "./Components/Game/Anagram";
 import PuzzleApp from "./Components/PuzzleGame/components/PuzzleApp";
 import DashboardMain from "./Components/Dashboard/dashboard-main";
 import "./Components/Css/loginform.css"
-import styled from "styled-components";
-const AppContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+
 
 function App() {
   return (
