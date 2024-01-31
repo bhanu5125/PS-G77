@@ -6,7 +6,6 @@ import AnagramDisplay from './AnagramDisplay';
 import AnagramInput from './AnagramInput';
 import RotatingCirclesBackground from './BackGround';
 import { Button } from 'react-bootstrap';
-import { Center, Flex } from '@chakra-ui/react';
 
 function Anagram() {
   const [hearts, setHearts] = useState(3);

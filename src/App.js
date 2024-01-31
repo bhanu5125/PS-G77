@@ -2,7 +2,6 @@ import React from "react";
 import UserForm from "./Components/Profile/profileform";
 import ProfilePage from "./Components/Profile/profile";
 import SuccessPage from "./Components/Profile/successp";
-import Calendar from "./Components/calender/calender";
 import TopNavbar from "./Components/Navbar/Navbar";
 import UpdateUser from "./Components/Profile/updateUser";
 import Footer from "./Components/Footer/Footer";
@@ -69,21 +68,6 @@ function App() {
               }
             ></Route>
          
-          <Route
-            path="/Calendar"
-            element={
-              <div className="d-flex  flex-row m-3 ">
-                <Sidebar />
-                <motion.div
-                  className="absolute p-5 py-5 my-4"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                >
-                  <Calendar />
-                </motion.div>
-              </div>
-            }
-          ></Route>
 
           <Route
             path="/ProfileForm"
