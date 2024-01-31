@@ -1,0 +1,14 @@
+.subm{
+    width: 100px;
+    justify-content: center;
+    padding-left: 10px;
+}
+.row{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    width: 800px;
+}
+.form{
+    justify-content: center;
+}

@@ -1,0 +1,64 @@
+/* BubblePopGame.css */
+.game-container {
+  width: 100%; /* Set the width as needed */
+  height: 600px; /* Set the height as needed */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble-pop-game {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  animation: bubbleMove 10s linear forwards; /* Adjust the duration (e.g., 10s) */
+}
+
+@keyframes bubbleMove {
+  to {
+    transform: translate(0, -100vh);
+    opacity: 0;
+  }
+}
+
+.game-result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-result h2 {
+  color: #e74c3c;
+}
+
+.game-result p {
+  margin: 10px 0;
+}

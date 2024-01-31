@@ -1,0 +1,86 @@
+import React, { useState, useEffect } from 'react';
+import './Anagram.css';
+import heart from "./assests/heart.png"
+import AnagramGenerator from './AnagramGenerator';
+import AnagramDisplay from './AnagramDisplay';
+import AnagramInput from './AnagramInput';
+import RotatingCirclesBackground from './BackGround';
+import { Button } from 'react-bootstrap';
+import { Center, Flex } from '@chakra-ui/react';
+
+function Anagram() {
+  const [hearts, setHearts] = useState(3);
+  const [word, setWord] = useState('');
+  const [anagram, setAnagram] = useState('');
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
+
+  useEffect(() => {
+    if (hearts === 0) {
+      setGameOver(true);
+    } else {
+      generateNewAnagram();
+    }
+  }, [score, hearts]);
+
+  const generateNewAnagram = () => {
+    const newWord = AnagramGenerator.getRandomWord(score);
+    const newAnagram = AnagramGenerator.shuffleWord(newWord);
+    setWord(newWord);
+    setAnagram(newAnagram);
+  };
+
+  const handleGuess = (guess) => {
+    if (guess.toLowerCase() === word.toLowerCase()) {
+      setScore(score + 1);
+    } else {
+      setHearts(hearts - 1);
+    }
+  };
+
+  const restartGame = () => {
+    setHearts(3);
+    setScore(0);
+    setGameOver(false);
+  };
+
+  return (
+
+    <div className="Anagram overflow-hidden">
+      <div
+        style={{
+          backgroundColor: "#0A1D37",
+          position: "absolute",
+          width: "100vw",
+          height: "100vh",
+          zIndex: "-101",
+          overflow: "hidden"
+
+        }}
+      >
+        <RotatingCirclesBackground/>
+      </div>
+      {gameOver ? (
+        <div>
+          <h1>Game Over!</h1>
+          <Button onClick={restartGame}>Restart</Button>
+        </div>
+      ) : (
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"}}>
+          <h1>Anagram Game</h1>
+          <div className='d-flex flex-row align-items-center justify-content-center'>
+            {/* Render heart images based on the hearts state */}
+            {Array.from({ length: hearts }, (_, index) => (
+              <img key={index} className='heart' src={heart} width={40} alt={`heart-${index}`} />
+            ))}
+          </div>
+          <p>Score: {score}</p>
+          <AnagramDisplay anagram={anagram} />
+          <AnagramInput onGuess={handleGuess} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Anagram;
