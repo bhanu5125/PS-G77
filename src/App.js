@@ -9,7 +9,6 @@ import FirstLayout from "./Components/FirstSlide/First";
 import ForgotPassword from "./Components/accountBox/Forgotpass";
 import ResetPassword from "./Components/accountBox/Resetpass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { motion } from "framer-motion";
 import AuthForm from "./Components/accountBox/Authform";
 import Sidebar from "./Components/Dashboard/sidebar";
 import Activity from "./Components/activities/activity";

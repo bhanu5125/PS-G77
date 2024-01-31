@@ -1,7 +1,6 @@
 import React from "react";
 import "../Css/Main.css";
 import Slider from "./slider";
-import Calendar from "../calender/calender";
 
 import heightimg from './assests/height-bar.png'
 import attention from"./assests/attention-icon.png"
@@ -150,8 +149,6 @@ function DashboardMain() {
 <h1 className="   justify-content-center mt-3 d-flex">Calendar</h1>
 <div className="d-flex justify-content-center ">
 
-
-<Calendar/>
 </div>
 </div>
 
