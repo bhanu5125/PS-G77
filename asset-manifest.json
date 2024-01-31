@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/PS-G77/static/css/main.0ba86258.css",
+    "main.js": "/PS-G77/static/js/main.736ee0a6.js",
+    "static/media/4452325_26552.jpg": "/PS-G77/static/media/4452325_26552.e5bc3dffdfe37043135f.jpg",
+    "static/media/trafalgar-header illustration 1.png": "/PS-G77/static/media/trafalgar-header illustration 1.7ef37fcd72d49793fb43.png",
+    "static/media/grapeimg.png": "/PS-G77/static/media/grapeimg.14be23bb05054d7b6c96.png",
+    "static/media/chat_bot_image.jpg": "/PS-G77/static/media/chat_bot_image.192ff5996e51133ecb2f.jpg",
+    "static/media/happy.png": "/PS-G77/static/media/happy.af9ee7dfce9f5805a496.png",
+    "static/media/dog.png": "/PS-G77/static/media/dog.04009959cd28d7742eac.png",
+    "static/media/cup.png": "/PS-G77/static/media/cup.e0fba6c41c33e2cca466.png",
+    "static/media/righthand.png": "/PS-G77/static/media/righthand.960cf818a8e34c1926ee.png",
+    "static/media/lefthand.png": "/PS-G77/static/media/lefthand.5d7c03675306237d55b4.png",
+    "static/media/sun.png": "/PS-G77/static/media/sun.84a2d31f1637705be8ae.png",
+    "static/media/reasoning-icon.png": "/PS-G77/static/media/reasoning-icon.df6540cb24a35ea3f4dd.png",
+    "static/media/memory-icon 3.png": "/PS-G77/static/media/memory-icon 3.d056898d79fd3e252ebf.png",
+    "static/media/lake-sound.mp3": "/PS-G77/static/media/lake-sound.0571974ce2b158425445.mp3",
+    "static/media/cat.png": "/PS-G77/static/media/cat.849a8383d69c4f1e00e9.png",
+    "static/media/language-icon.png": "/PS-G77/static/media/language-icon.be46a39059474290c515.png",
+    "static/media/prob-solving-icon.png": "/PS-G77/static/media/prob-solving-icon.0ff5849ca8e0eb60c552.png",
+    "static/media/reaction-icon.png": "/PS-G77/static/media/reaction-icon.39ae13db37db4b14ecca.png",
+    "static/media/memory-down.png": "/PS-G77/static/media/memory-down.5934e0cbce4fc36e172f.png",
+    "static/media/heart.png": "/PS-G77/static/media/heart.db346a1411bbeeb59dcb.png",
+    "static/media/reaction-down.png": "/PS-G77/static/media/reaction-down.31e40ec57b6d5682ebea.png",
+    "static/media/language-down.png": "/PS-G77/static/media/language-down.2cb58fa238dfc4fb6112.png",
+    "static/media/attention-down.png": "/PS-G77/static/media/attention-down.af4b6fb25feff539f5e8.png",
+    "static/media/reasoning-down.png": "/PS-G77/static/media/reasoning-down.a33ff077bf1a08e853ef.png",
+    "static/media/ps-down.png": "/PS-G77/static/media/ps-down.7c356a4e6433530fb227.png",
+    "static/media/sun2.png": "/PS-G77/static/media/sun2.e71733a2834a22521a20.png",
+    "static/media/s-sound.mp3": "/PS-G77/static/media/s-sound.6084e2bb4e4dc61c247c.mp3",
+    "static/media/Frame5.svg": "/PS-G77/static/media/Frame5.162111178f8897f9eb26737b3415083f.svg",
+    "static/media/Activity.svg": "/PS-G77/static/media/Activity.bbbf1221d8e8b9f566d3eed565e494bc.svg",
+    "index.html": "/PS-G77/index.html",
+    "main.0ba86258.css.map": "/PS-G77/static/css/main.0ba86258.css.map",
+    "main.736ee0a6.js.map": "/PS-G77/static/js/main.736ee0a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ba86258.css",
+    "static/js/main.736ee0a6.js"
+  ]
+}
