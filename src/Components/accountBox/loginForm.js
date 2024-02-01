@@ -4,9 +4,9 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate} from 'react-router-dom'
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from '@greatsumini/react-facebook-login';
 import MicrosoftLogin from 'react-microsoft-login';
-//import GitHubLogin from "react-github-login";
+import GitHubLogin from "react-github-login";
 import aJwtDecode from "./authi";
 import styles from "./styles.module.css";
 import './AuthForm.css';
@@ -195,7 +195,7 @@ const handleMicrosoftLogin = async (err, data) => {
       </MicrosoftLogin>
       </div>
       <div className="social-icon">
-      {/*<GitHubLogin 
+      <GitHubLogin 
         className="git"
         clientId="a9c2dea3c6f7faa3ddd5"
         redirectUri='http://localhost:3000/api/exchange-code'
@@ -204,7 +204,7 @@ const handleMicrosoftLogin = async (err, data) => {
       >
       <button style={{border:"none", padding:"0", background:"none", backgroundImage:"url('https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png')",backgroundSize:"cover", borderRadius:"50%", width:"50px", height:"50px"}}></button>
       </GitHubLogin>
-      */}
+      
       </div>
       </div>
     </form>

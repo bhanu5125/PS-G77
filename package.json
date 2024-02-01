@@ -5,6 +5,7 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "@azure/msal-browser": "^3.7.0",
+    "@greatsumini/react-facebook-login": "^3.3.3",
     "@react-oauth/google": "^0.11.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
