@@ -3,6 +3,7 @@ import shuffleArray from "../utils/shuffleFunction";
 import Puzzle from "./Puzzle";
 import Timer from "./Timer";
 import "./Game.css";
+import axios from "axios";
 
 export default function Game({ level, onLevelCompletion }) {
   const gridSize = level + 2;
@@ -26,9 +27,19 @@ export default function Game({ level, onLevelCompletion }) {
     if (won) {
       setWin(true);
       setTimerActive(false);
-    }
+          try {
+            const scr = axios.post('http://localhost:5000/api/activity', {
+              email: localStorage.getItem('email'),
+              gameType: "Problem-Solving",
+              score: (moves/time),
+            });
+            console.log(scr);
+          } catch (error) {
+            console.error('Error submitting:', error);
+          }
+        }
     return;
-  }, [moves, shuffledArray]);
+  }, [moves, shuffledArray, time]);
 
   const newGame = () => {
     setMoves(0);

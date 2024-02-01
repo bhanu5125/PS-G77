@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class GameOver extends Component {
-
   render(){
     return (
       <div className="game__game-over" style={{ display: this.props.context.state.gameOver }}>

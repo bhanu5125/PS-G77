@@ -6,6 +6,7 @@ import AnagramDisplay from './AnagramDisplay';
 import AnagramInput from './AnagramInput';
 import RotatingCirclesBackground from './BackGround';
 import { Button } from 'react-bootstrap';
+import axios from 'axios';
 
 function Anagram() {
   const [hearts, setHearts] = useState(3);
@@ -42,6 +43,22 @@ function Anagram() {
     setScore(0);
     setGameOver(false);
   };
+
+  useEffect(() =>{
+    if(gameOver)
+    {
+      try {
+        const scr = axios.post('http://localhost:5000/api/activity', {
+          email: localStorage.getItem('email'),
+          gameType: "Langauge",
+          score: score,
+        });
+        console.log(scr);
+      } catch (error) {
+        console.error('Error submitting:', error);
+      }
+    }
+  },[gameOver, score])
 
   return (
 

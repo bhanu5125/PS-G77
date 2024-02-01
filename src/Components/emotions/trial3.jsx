@@ -6,6 +6,7 @@ import correctSound from './Assets/correct-answer.wav';
 import incorrectSound from './Assets/wrong-answer.mp3';
 import cardFlipSound from './Assets/Card-flip.mp3';
 import heart from './Assets/heart.png';
+import axios from 'axios';
 
 const EmotionFlashcardGame = ({ ageRange, level, levels }) => {
   const [selectedEmotions, setSelectedEmotions] = useState([]);
@@ -25,6 +26,7 @@ const EmotionFlashcardGame = ({ ageRange, level, levels }) => {
   const [incorrectCount, setIncorrectCount] = useState(0);
   const startTimeRef = useRef(null);
   const timerRef = useRef(null);
+  const [trecommendations, setRecommendations] = useState([]);
 
   const correctAudio = new Audio(correctSound);
   const incorrectAudio = new Audio(incorrectSound);
@@ -41,6 +43,23 @@ const EmotionFlashcardGame = ({ ageRange, level, levels }) => {
     }
   }, [ageRange, level]);
   
+  useEffect(() =>{
+    if(gameOver)
+    {
+      console.log(level)
+      try {
+        const scr = axios.post('http://localhost:5000/api/activity', {
+          email: localStorage.getItem('email'),
+          gameType: "Reflex",
+          score: score,
+        });
+        console.log(scr);
+      } catch (error) {
+        console.error('Error submitting:', error);
+      }
+    }
+  },[gameOver, score, level])
+
   useEffect(() => {
     if (!isPaused) {
       timerRef.current = setInterval(() => {
@@ -179,10 +198,23 @@ const EmotionFlashcardGame = ({ ageRange, level, levels }) => {
     }, 1000);
   };
 
+  const getRecommendations = async () => {
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/recommendations', {
+        game_name: "reflex",
+        level: level,
+        played: [],
+      });
+      setRecommendations(response.data);
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    }
+  };
   return (
     <div className="App" style={{ textAlign: 'center', marginTop: '20px' }}>
       {/* <h1>Emotion Flashcards - {ageRange} - {levels[level].name}</h1> */}
       {gameOver ? (
+        <div>
         <GameOver
           score={score}
           TotalQuestions={questionsAsked}
@@ -190,6 +222,18 @@ const EmotionFlashcardGame = ({ ageRange, level, levels }) => {
           wrong={incorrectCount}
           onRestart={restartGame}
         />
+        
+       <button onClick={getRecommendations}>Get Recommendations</button>
+       <ul>
+          {trecommendations.length > 0 ? (
+            trecommendations.map((recommendation, index) => (
+              <li key={index}>{recommendation[0]} : {recommendation[1]}</li>
+            ))
+          ) : (
+            <li></li>
+          )}
+        </ul>
+        </div>
       ) : (
         <>
           <div style={{ fontSize: '20px', marginBottom: '10px' }}>

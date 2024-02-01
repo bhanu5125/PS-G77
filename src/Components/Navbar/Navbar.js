@@ -62,8 +62,8 @@ function TopNavbar() {
               <Nav.Link hidden={isHidden} href="/Dashboard" className="Sides2">
                 Dashboard
               </Nav.Link>
-              <Nav.Link hidden={isHidden} href="/deets" className="Sides2">
-                More deets
+              <Nav.Link hidden={isHidden} href="/gamepage" className="Sides2">
+                Activities
               </Nav.Link>
                 {signup ? (
                   <div hidden={isHidden} className="d-flex gap-1">

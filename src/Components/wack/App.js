@@ -5,7 +5,7 @@ import Score from './Score.js';
 import GameOver from './GameOver.js';
 import StartButton from './StartButton.js';
 import MoleHole from './MoleHole.js';
-
+import axios from 'axios';
 class WackApp extends Component {
 
   constructor(props) {
@@ -79,6 +79,17 @@ class WackApp extends Component {
     const intervalID = setInterval(() => {
       this.displayMoles();
       if (++x === 16) {
+            try {
+              const scr = axios.post('http://localhost:5000/api/activity', {
+                email: localStorage.getItem('email'),
+                gameType: "Attention",
+                score: 10,
+              });
+              console.log(scr);
+            } catch (error) {
+              console.error('Error submitting:', error);
+            }
+  
         window.clearInterval(intervalID);
         this.clearMoles();
         this.setState({ gameHasStarted: false });
