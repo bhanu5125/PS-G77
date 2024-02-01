@@ -25,7 +25,7 @@ import Anagram from "./Components/Game/Anagram";
 import PuzzleApp from "./Components/PuzzleGame/components/PuzzleApp";
 import DashboardMain from "./Components/Dashboard/dashboard-main";
 import "./Components/Css/loginform.css"
-
+import Gamepage from "./Components/GamePages.jsx/Gamepage";
 
 function App() {
   return (
@@ -150,6 +150,11 @@ function App() {
             <PuzzleApp/>
                 </>
           }>
+          </Route>
+          <Route path="/gamepage" 
+          element={
+            <Gamepage/>
+            }>
           </Route>
         </Routes>
       </BrowserRouter>
