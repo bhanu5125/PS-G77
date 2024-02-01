@@ -71,6 +71,7 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "react-scripts": "^5.0.1"
   }
 }
