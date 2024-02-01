@@ -62,7 +62,7 @@ export default function Game({ level, onLevelCompletion }) {
   };
 
   return (
-    <div className="game-container">
+    <div className="game-container1">
       <div className="game-content">
         {win && (
           <div className="win-message">

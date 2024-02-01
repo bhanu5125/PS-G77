@@ -3,33 +3,52 @@ import "./Gamepage.css"; // Create a separate CSS file for styling
 import AnagramCP from "./assests/Anagram_cp.jpg";
 import ColourPatternCP from "./assests/ColourPatterns_cp.jpg.png";
 import EmotionCP from "./assests/EmotionCover_pic.jpg";
+import slidePuzzleCP from "./assests/slide puzzle.jpg";
+import { useNavigate, Link } from "react-router-dom";
+
 export default function Gamepage() {
+
+  const navigate = useNavigate()
+
   return (
     <div className="gamepage-container">
-      <div className="row">
-        <h1 className="d-flex align-items-center justify-content-center mt-5">
-          Autism
-        </h1>
+      <h1 className="d-flex align-items-center justify-content-center mt-5">
+        Autism
+      </h1>
+      <div className="row1">
         <div className="boxgamepage">
-          Anagram
-          <img className="imgcolourpattern" src={AnagramCP}></img>
+          <Link to="/AnagramGame">
+          <img className="imganagram" src={AnagramCP}></img>
+          </Link>
         </div>
         <div className="boxgamepage">
-          Colour Pattern
-        <img className="imgcolourpattern" src={ColourPatternCP}></img>
-</div>
+        <Link to="/PuzzleGame">
+          <img className="imgcolourpattern" src={ColourPatternCP}></img>
+        </Link>
+        </div>
         <div className="boxgamepage">
-        <img className="imgemotion" src={EmotionCP}></img>
-</div>
+        <Link to="/EmotionGame">
+          <img className="imgemotion" src={EmotionCP}></img>
+        </Link>
+        </div>
       </div>
 
-      <div className="row">
-        <h1 className="d-flex align-items-center justify-content-center ">
-          Dyslexia
-        </h1>
-        <div className="boxgamepage">Box 4</div>
-        <div className="boxgamepage">Box 5</div>
+      <h1 className="d-flex align-items-center justify-content-center ">
+        Dyslexia
+      </h1>
+      <div className="row1">
+        <div className="boxgamepage">
+        <Link to="/PuzzleGame">
+          <img className="imgslide" src={slidePuzzleCP}></img>
+         </Link>
+        </div>
+        <div className="boxgamepage">
+        <Link to="/WackGame">
+          <img className="wackamole" src={"https://img.gamedistribution.com/5905642773bc49738888210d0b2d3112-512x512.jpeg"}></img>
+        </Link>
+        </div>
       </div>
-    </div>
-  );
+    </div>
+  );
 }
+

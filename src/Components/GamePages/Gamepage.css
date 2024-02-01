@@ -1,4 +1,4 @@
-.row {
+.row1 {
   display: flex;
   flex-direction:row;
   gap:20px;
@@ -9,29 +9,45 @@
 }
 .imgemotion{
 
-height: 260px;
-margin-left: -20px;
+height: 220px;
+margin-left: -2px;
 
+}
+.imgslide{
+  height: 220px;
+  margin-left: -60px;
 }
 .imgcolourpattern{
 
   height: 160px;
-  margin-top: 80px;
-  margin-left: -25px;
+  margin-top: 18px;
+  margin-left: -18px;
   
   }
+.imganagram{
 
+  height: 160px;
+  margin-top: 25px;
+  margin-left: -2px;
+  
+  }
+.wackamole{
+
+  height: 220px;
+  margin-left: -4px;
+  
+}
+  
 .boxgamepage {
   overflow: hidden;
   width: 213px;
-  height: 262px;
+  height: 213px;
   flex-shrink: 0;
-  width: 213px;
-  height: 262px;
+
   flex-shrink: 0;
   border-radius: 12px;
   border: 1px solid #e8e7e7;
   background: #fff;
-  box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.08)
+  box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.08)
 
 }

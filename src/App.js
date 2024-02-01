@@ -20,12 +20,13 @@ import DSurvey from "./Components/dislexia/templets/survey";
 import DResult from "./Components/dislexia/templets/result";
 import Page from './Components/diseases/page'
 import BubblePopGame from "./Components/Bubblepop/Bubblepop";
-import Game1 from "./Components/psgame1/game1";
 import Anagram from "./Components/Game/Anagram";
 import PuzzleApp from "./Components/PuzzleGame/components/PuzzleApp";
 import DashboardMain from "./Components/Dashboard/dashboard-main";
 import "./Components/Css/loginform.css"
-import Gamepage from "./Components/GamePages.jsx/Gamepage";
+import Gamepage from "./Components/GamePages/Gamepage";
+import EmotionGame from "./Components/emotions/Game";
+import Wackapp from "./Components/wack/App"
 
 function App() {
   return (
@@ -134,12 +135,7 @@ function App() {
                 <BubblePopGame/>
           }>
           </Route>
-          <Route path="/Game1"
-          element={
-                <Game1/>
-          }>
-          </Route>
-          <Route path="/Anagram"
+          <Route path="/AnagramGame"
           element={
                 <Anagram/>
           }>
@@ -154,6 +150,16 @@ function App() {
           <Route path="/gamepage" 
           element={
             <Gamepage/>
+            }>
+          </Route>
+          <Route path="/EmotionGame" 
+          element={
+            <EmotionGame/>
+            }>
+          </Route>
+          <Route path="/WackGame" 
+          element={
+            <Wackapp/>
             }>
           </Route>
         </Routes>
