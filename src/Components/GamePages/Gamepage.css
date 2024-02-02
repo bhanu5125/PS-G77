@@ -38,6 +38,11 @@ margin-left: -2px;
   
 }
   
+.memorygame
+{
+  height: 220px;
+  margin-left: -60px;
+}
 .boxgamepage {
   overflow: hidden;
   width: 213px;

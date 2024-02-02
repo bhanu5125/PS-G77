@@ -14,10 +14,11 @@ import Sidebar from "./Components/Dashboard/sidebar";
 import Activity from "./Components/activities/activity";
 import GradioButton from './Components/chat_bot/GradioButton';
 import './Components/chat_bot/GradioButton.css';
-import Autisam from "./Components/ML_models/template/auti";
-import DQuiz from "./Components/dislexia/templets/quiz";
-import DSurvey from "./Components/dislexia/templets/survey";
-import DResult from "./Components/dislexia/templets/result";
+import Autisam from "./Components/ML_MODEL/Autisam/auti";
+//import DQuiz from "./Components/dislexia/templets/quiz";
+import DQuiz from "./Components/ML_MODEL/Dyslexia/templates/quiz"
+import DSurvey from "./Components/ML_MODEL/Dyslexia/templates/survey";
+import DResult from "./Components/ML_MODEL/Dyslexia/templates/result";
 import Page from './Components/diseases/page'
 import BubblePopGame from "./Components/Bubblepop/Bubblepop";
 import Anagram from "./Components/Game/Anagram";
@@ -28,7 +29,6 @@ import Gamepage from "./Components/GamePages/Gamepage";
 import EmotionGame from "./Components/emotions/Game";
 import Wackapp from "./Components/wack/App"
 import ColourGame from "./Components/Colorgame/Colourgame";
-import Graph from "./Components/Graph/Graph";
 import MemoryApp from "./Components/MemoryGame/src/MemoryApp";
 
 function App() {
@@ -168,11 +168,6 @@ function App() {
           <Route path="/ColourGame" 
           element={
             <ColourGame/>
-            }>
-          </Route>
-          <Route path="/Graph" 
-          element={
-            <Graph/>
             }>
           </Route>
           <Route path="/MemoryGame" 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import "../Css/Main.css";
 import Slider from "./slider";
 
@@ -13,6 +13,7 @@ import langfooter from "./assests/language-down.png"
 import ps from"./assests/prob-solving-icon.png";
 import psfooter from "./assests/ps-down.png"
 import Sidebar from "./sidebar";
+import axios from 'axios';
 
 import reasoning from "./assests/reasoning-icon.png"
 import resfooter from "./assests/reasoning-down.png"
@@ -28,6 +29,21 @@ function DashboardMain() {
     String(" " + date + " ") +
     year;
   console.log(month);
+  const [datakeys, setdatakeys] = useState()
+  const [datavalues, setdatavalues] = useState()
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      const email = localStorage.getItem("email")
+      try {
+        const response = await axios.get(`/activityset/${email}`)
+        setdatakeys(Object.keys(response.data.scores));
+        setdatavalues(Object.values(response.data.scores));
+      } catch (error) {
+        console.error('Error fetching user details:', error);
+      }
+    };
+    fetchUserDetails();
+  }, [])
   return (
     <div className="d-flex flex-row">
     <div className="back my-3 ms-3">

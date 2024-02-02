@@ -15,7 +15,7 @@ class GameOver extends Component {
 
   // Method to fetch recommendations
   getRecommendations() {
-    axios.post('http://127.0.0.1:5000/recommendations', {
+    axios.post('http://127.0.0.1:5001/recommendations', {
       game_name: "Attention",
       level: "medium",
       played: [],

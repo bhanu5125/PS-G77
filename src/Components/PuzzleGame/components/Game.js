@@ -6,6 +6,7 @@ import "./Game.css";
 import axios from "axios";
 
 export default function Game({ level, onLevelCompletion }) {
+  const Glevel = level;
   const gridSize = level + 2;
   const [shuffledArray, setShuffledArray] = useState(() => shuffleArray(gridSize));
   const [moves, setMoves] = useState(0);
@@ -75,9 +76,9 @@ export default function Game({ level, onLevelCompletion }) {
 
   const getRecommendations = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/recommendations', {
+      const response = await axios.post('http://127.0.0.1:5001/recommendations', {
         game_name: "reflex",
-        level: level,
+        level: "medium",
         played: [],
       });
       setRecommendations(response.data);

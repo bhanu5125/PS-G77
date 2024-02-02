@@ -72,7 +72,7 @@ function Cards({ level }) {
   return (
     <div>
       {!gameOver ? (
-        <div className="container" style={{ gridTemplateColumns: `repeat(${gridSize[level].cols}, 1fr)`, gridTemplateRows: `repeat(${gridSize[level].rows}, 1fr)` }}>
+        <div className="containerm" style={{ gridTemplateColumns: `repeat(${gridSize[level].cols}, 1fr)`, gridTemplateRows: `repeat(${gridSize[level].rows}, 1fr)` }}>
           {cards.map((card, index) => (
             <Card key={index} item={card} id={index} handleClick={handleCardClick} />
           ))}

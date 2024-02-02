@@ -47,6 +47,11 @@ export default function Gamepage() {
           <img className="wackamole" src={"https://img.gamedistribution.com/5905642773bc49738888210d0b2d3112-512x512.jpeg"}></img>
         </Link>
         </div>
+        <div className="boxgamepage">
+        <Link to="/MemoryGame">
+          <img className="memorygame" src={"https://img.freepik.com/free-vector/hand-drawn-memory-game-card_23-2150138543.jpg?size=626&ext=jpg&ga=GA1.1.1368074558.1705160837&semt=ais"}></img>
+        </Link>
+        </div>
       </div>
     </div>
   );
