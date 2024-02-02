@@ -29,6 +29,7 @@ import EmotionGame from "./Components/emotions/Game";
 import Wackapp from "./Components/wack/App"
 import ColourGame from "./Components/Colorgame/Colourgame";
 import Graph from "./Components/Graph/Graph";
+import MemoryApp from "./Components/MemoryGame/src/MemoryApp";
 
 function App() {
   return (
@@ -172,6 +173,11 @@ function App() {
           <Route path="/Graph" 
           element={
             <Graph/>
+            }>
+          </Route>
+          <Route path="/MemoryGame" 
+          element={
+            <MemoryApp/>
             }>
           </Route>
         </Routes>

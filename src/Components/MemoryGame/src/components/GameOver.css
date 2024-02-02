@@ -1,0 +1,19 @@
+/* GameOver.css */
+
+.game-over-container {
+    text-align: center;
+    margin-top: 90px;
+  }
+  
+  .game-over-container h2 {
+    font-size: 36px;
+    color: #ff6347; /* or any color you prefer */
+  }
+  
+  .game-over-container p {
+    font-size: 26px;
+    margin-top: 10px;
+  }
+  
+  /* Add more styles as needed */
+  
