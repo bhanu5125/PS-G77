@@ -8,6 +8,7 @@ const autisamroute = require("../api/Routes/autisam.js");
 const dislexiaroute = require("../api/Routes/dislexia.js")
 const activityroute = require("../api/Routes/activity.js")
 const { loginUser } = require("../api/models/loginuser.js");
+const { Activity } = require("../api/models/activity.js")
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const nodemailer = require('nodemailer')
@@ -203,6 +204,18 @@ app.get('/microsoft/user', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
+app.get("/activityset/:email", async (req, res) => {
+  const email = req.params.email;
+  try {
+    const userDetails = await Activity.findOne({ email: email });
+    res.json(userDetails);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

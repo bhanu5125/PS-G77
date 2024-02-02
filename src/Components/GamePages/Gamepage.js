@@ -22,7 +22,7 @@ export default function Gamepage() {
           </Link>
         </div>
         <div className="boxgamepage">
-        <Link to="/PuzzleGame">
+        <Link to="/ColourGame">
           <img className="imgcolourpattern" src={ColourPatternCP}></img>
         </Link>
         </div>

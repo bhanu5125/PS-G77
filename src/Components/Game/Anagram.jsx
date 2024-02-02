@@ -43,6 +43,19 @@ function Anagram() {
     setScore(0);
     setGameOver(false);
   };
+  const [trecommendations, setRecommendations] = useState([]);
+  const getRecommendations = async () => {
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/recommendations', {
+        game_name: "Language",
+        level: "medium",
+        played: [],
+      });
+      setRecommendations(response.data);
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    }
+  };
 
   useEffect(() =>{
     if(gameOver)
@@ -80,6 +93,16 @@ function Anagram() {
         <div>
           <h1>Game Over!</h1>
           <Button onClick={restartGame}>Restart</Button>
+          <button onClick={getRecommendations}>Get Recommendations</button>
+       <ul>
+          {trecommendations.length > 0 ? (
+            trecommendations.map((recommendation, index) => (
+              <li key={index}>{recommendation[0]} : {recommendation[1]}</li>
+            ))
+          ) : (
+            <li></li>
+          )}
+        </ul>
         </div>
       ) : (
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column"}}>

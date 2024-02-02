@@ -27,6 +27,8 @@ import "./Components/Css/loginform.css"
 import Gamepage from "./Components/GamePages/Gamepage";
 import EmotionGame from "./Components/emotions/Game";
 import Wackapp from "./Components/wack/App"
+import ColourGame from "./Components/Colorgame/Colourgame";
+import Graph from "./Components/Graph/Graph";
 
 function App() {
   return (
@@ -160,6 +162,16 @@ function App() {
           <Route path="/WackGame" 
           element={
             <Wackapp/>
+            }>
+          </Route>
+          <Route path="/ColourGame" 
+          element={
+            <ColourGame/>
+            }>
+          </Route>
+          <Route path="/Graph" 
+          element={
+            <Graph/>
             }>
           </Route>
         </Routes>

@@ -12,6 +12,7 @@ export default function Game({ level, onLevelCompletion }) {
   const [time, setTime] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
   const [win, setWin] = useState(false);
+  const [trecommendations, setRecommendations] = useState([]);
 
   useEffect(() => {
     if (moves === 1) setTimerActive(true);
@@ -72,6 +73,19 @@ export default function Game({ level, onLevelCompletion }) {
     setMoves((prevMoves) => prevMoves + 1);
   };
 
+  const getRecommendations = async () => {
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/recommendations', {
+        game_name: "reflex",
+        level: level,
+        played: [],
+      });
+      setRecommendations(response.data);
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    }
+  };
+
   return (
     <div className="game-container1">
       <div className="game-content">
@@ -115,6 +129,16 @@ export default function Game({ level, onLevelCompletion }) {
                 >
                   Move to Next Level
                 </button>
+                <button onClick={getRecommendations}>Get Recommendations</button>
+       <ul>
+          {trecommendations.length > 0 ? (
+            trecommendations.map((recommendation, index) => (
+              <li key={index}>{recommendation[0]} : {recommendation[1]}</li>
+            ))
+          ) : (
+            <li></li>
+          )}
+        </ul>
               </div>
             </div>
           </div>
