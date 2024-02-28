@@ -2,7 +2,7 @@
   "name": "healthcare",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://ps-g77.vercel.app",
   "dependencies": {
     "@azure/msal-browser": "^3.7.0",
     "@greatsumini/react-facebook-login": "^3.3.3",
