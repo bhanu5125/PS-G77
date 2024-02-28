@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://ps-g77.vercel.app",
+  "homepage": ".",
   "dependencies": {
     "@azure/msal-browser": "^3.7.0",
     "@greatsumini/react-facebook-login": "^3.3.3",
