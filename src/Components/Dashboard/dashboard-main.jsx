@@ -50,7 +50,7 @@ function DashboardMain() {
       <div className="d-flex flex-row m-0 gap-0">
       <Sidebar/>
     
-      <div className="d-flex flex-col font1 mx-4   fw-bold">
+      <div className="d-flex flex-col font1 mx-4 fw-bold">
         <div className="px-4 mt-4">Health Overview</div>
         <div className="px-4 font2 ">{total}</div>
     
